@@ -7,7 +7,8 @@ import os
 from math import radians, sin, cos, sqrt, atan2
 
 class Map:
-    def __init__(self, url, on_draw):
+    def __init__(self, title, url, on_draw):
+        self.title = title
         self.url = url
         self.on_draw = on_draw
     
@@ -36,7 +37,7 @@ class Map:
             fig, ax = plt.subplots(1, 1, figsize=(10, 10))
             gdf.plot(column='min_distance', ax=ax, legend=True,
                     cmap='viridis', edgecolor='black', linewidth=0.8)
-            ax.set_title("Distance from French Regions to Nearest Point")
+            ax.set_title(self.title)
             ax.set_axis_off()
             plt.show()
 

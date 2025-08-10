@@ -27,6 +27,7 @@ def min_dist(centroid):
 
 map_maker.Map(
     url=url,
-    on_draw=min_dist
+    on_draw=min_dist,
+    title = "Regions which centres are less the 20 km from a property"
 ).render()
 
