@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import requests
 import tempfile
 import os
-from math import radians, sin, cos, sqrt, atan2
 
 class Map:
     def __init__(self, title, url, on_draw):

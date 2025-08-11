@@ -23,11 +23,11 @@ def min_dist(centroid):
         lon1, lat1 = centroid.x, centroid.y
         lon2, lat2 = p.x, p.y
         km_distances.append(haversine(lon1, lat1, lon2, lat2))
-    return 0 if min(km_distances) > 20 else 1
+    return 0 if min(km_distances) > 60 else 1
 
 map_maker.Map(
     url=url,
     on_draw=min_dist,
-    title = "Regions which centres are less the 20 km from a property"
+    title = "Regions which centres are less the 60 km from a property"
 ).render()
 
